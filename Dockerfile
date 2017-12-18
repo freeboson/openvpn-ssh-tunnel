@@ -3,7 +3,7 @@ FROM alpine:latest
 LABEL maintainer="Sujeet Akula <sujeet@freeboson.org>"
 
 COPY pia-config.sh /pia-config.sh
-RUN apk add --update openvpn openssh openssh-keygen zsh && \
+RUN apk add --update openvpn openssh openssh-keygen && \
     adduser tunnel -D && \
     passwd -u tunnel && \
     mkdir -p /etc/authorized_keys && \
