@@ -29,4 +29,7 @@ Lots of room for improvement here:
 5. Make it easy to swap out OpenVPN configs without rebuilding the image, e.g.
    `scp` a config from a different provider and pick that from CLI args
     - Maybe volumes are useful here, idk
+6. (Flip side of #2), if you don't want it local-only, use a restricted shell so
+   that you can only tunnel, and not issue commands
+    - I really am not familiar with how docker security works
 
