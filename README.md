@@ -28,5 +28,5 @@ Lots of room for improvement here:
 4. Are there signatures or sums for the PIA configs somewhere?
 5. Make it easy to swap out OpenVPN configs without rebuilding the image, e.g.
    `scp` a config from a different provider and pick that from CLI args
-  - Maybe volumes are useful here, idk
+    - Maybe volumes are useful here, idk
 
