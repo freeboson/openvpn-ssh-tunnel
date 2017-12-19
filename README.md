@@ -23,11 +23,11 @@ users, but they have major shortcomings:
 
 The setup here will be like this:
 ```
-+----------+  (chacha20)  +-------------+  (AES-128 CBC)  +------------+
-|          |==============|    Docker   |=================|            |
-|   You    |      SSH     +-----+ +-----+     OpenVPN     |   Remote   |
-|          |==============| SSH | | VPN |=================|            |
-+----------+              +-------------+                 +------------+
+┏━━━━━━━━━━━┓  (chacha20)  ┏━━━━━━━━━━━━━┓  (AES-128 CBC)  ┏━━━━━━━━━━━┓
+┃           ┃──────────────┃    Docker   ┃─────────────────┃           ┃
+┃    You    ┃      SSH     ┠─────┐ ┌─────┨     OpenVPN     ┃    PIA    ┃
+┃           ┃──────────────┃ SSH │ │ VPN ┃─────────────────┃           ┃
+┗━━━━━━━━━━━┛              ┗━━━━━┷━┷━━━━━┛                 ┗━━━━━━━━━━━┛
 ```
 The docker container might be running on your own computer so the SSH pipeline
 might be via loopback, or you could expose the SSH server to a larger network.
